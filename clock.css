@@ -1,0 +1,20 @@
+*{
+	margin: 0;
+	padding: 2px;
+  font-family: 'Press Start 2P', cursive;
+}
+#time, #calendar{
+	color: #fff;
+	text-shadow:
+	black 2px 0px,  black -2px 0px,	black 0px -2px, black 0px 2px,
+	black 2px 2px , black -2px 2px,	black 2px -2px, black -2px -2px,
+	black 1px 2px,  black -1px 2px,	black 1px -2px, black -1px -2px,
+	black 2px 1px,  black -2px 1px,	black 2px -1px, black -2px -1px;
+	line-height: 1;
+}
+#time {
+  font-size: 25px;
+}
+#calendar {
+  font-size: 14px;
+}
