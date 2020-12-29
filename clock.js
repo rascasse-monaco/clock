@@ -2,18 +2,16 @@
 import { makeDoubleDigits } from './time-handling-util.js';
 
 setInterval(() => {
-  const time = new Date();
+  const now = new Date();
   const timeArrey = {
-    hour: makeDoubleDigits(time.getHours()),
-    min: makeDoubleDigits(time.getMinutes()),
-    sec: makeDoubleDigits(time.getSeconds())
+    hour: makeDoubleDigits(now.getHours()),
+    min: makeDoubleDigits(now.getMinutes()),
+    sec: makeDoubleDigits(now.getSeconds())
   };
-
-  const calendar = new Date();
   const calendarArrey = {
-    year: makeDoubleDigits(calendar.getFullYear()),
-    month: makeDoubleDigits(calendar.getMonth() + 1),
-    date: makeDoubleDigits(calendar.getDate()),
+    year: makeDoubleDigits(now.getFullYear()),
+    month: makeDoubleDigits(now.getMonth() + 1),
+    date: makeDoubleDigits(now.getDate()),
     dayText: [ 'Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.' ]
   };
 
@@ -23,6 +21,6 @@ setInterval(() => {
 
   const calendarElement = document.getElementById('calendar');
   calendarElement.innerHTML =
-    `${calendarArrey.year}.${calendarArrey.month}.${calendarArrey.date}.${calendarArrey.dayText[calendar.getDay()]}`;
+    `${calendarArrey.year}.${calendarArrey.month}.${calendarArrey.date}.${calendarArrey.dayText[now.getDay()]}`;
 
 }, 1000);
