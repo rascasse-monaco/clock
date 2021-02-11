@@ -1,17 +1,17 @@
 'use strict';
-import { makeDoubleDigits } from './time-handling-util.js';
 
 setInterval(() => {
+  
   const now = new Date();
   const timeArrey = {
-    hour: makeDoubleDigits(now.getHours()),
-    min: makeDoubleDigits(now.getMinutes()),
-    sec: makeDoubleDigits(now.getSeconds())
+    hour: now.getHours().toString().padStart(2, '0'),
+    min: now.getMinutes().toString().padStart(2, '0'),
+    sec: now.getSeconds().toString().padStart(2, '0')
   };
   const calendarArrey = {
-    year: makeDoubleDigits(now.getFullYear()),
-    month: makeDoubleDigits(now.getMonth() + 1),
-    date: makeDoubleDigits(now.getDate()),
+    year: now.getFullYear(),
+    month: (now.getMonth() + 1).toString().padStart(2, '0'),
+    date: now.getDate().toString().padStart(2, '0'),
     dayText: [ 'Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.' ]
   };
 
